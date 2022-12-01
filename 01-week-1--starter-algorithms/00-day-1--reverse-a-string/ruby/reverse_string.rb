@@ -1,5 +1,10 @@
 def reverse_string(str)
-  # type your code in here
+  output = ''
+  input = str.chars
+  input.size.times do
+    output << input.pop
+  end
+  output
 end
 
 if __FILE__ == $PROGRAM_NAME
