@@ -1,5 +1,16 @@
+# Given a number (n), we're gonna calculate the nth value from the beginning of the Fibonacci Sequence, a logical order that adds that last two values to each other to produce the next value
+
 def fibonacci(num)
-  # type your code in here
+  output = [0]
+  if num >= 1
+    output << 1
+    i = 1
+    while i < num
+      output << (output[i - 1] + output[i])
+      i += 1
+    end
+  end
+  output.last
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -19,5 +30,9 @@ if __FILE__ == $PROGRAM_NAME
   # Don't forget to add your own!
 end
 
-# Please add your pseudocode to this file
-# And a written explanation of your solution
+# def fibonacci(num)
+#   output = [0]
+#   if num >= 1
+#     output << 1
+#
+#

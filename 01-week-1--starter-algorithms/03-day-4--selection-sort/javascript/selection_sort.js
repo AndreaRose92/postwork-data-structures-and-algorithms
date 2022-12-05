@@ -1,5 +1,19 @@
 function selectionSort(arr) {
-  // type your code here
+  let sorted = []
+  if (arr.length === 0) {
+    return sorted
+  }
+  sorted.push(arr.shift())
+  while (arr.length > 0) {
+    let value = arr.shift()
+    let idx = sorted.findIndex(element => element >= value)
+    if (idx === -1) {
+      sorted.push(value)
+    } else {
+      sorted.splice(idx, 0, value)
+    }
+  }
+  return sorted
 }
 
 if (require.main === module) {
